@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "isBackground": true,
+      "type": "shell",
+      "label": "Test",
+      "command": "gradle run --debug-jvm",
+      "problemMatcher": [
+        {
+          "pattern": [
+            {
+              "regexp": ".",
+              "file": 1,
+              "location": 2,
+              "message": 3
+            }
+          ],
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "Task :app:run",
+            "endsPattern": "Listening for transport dt_socket at address: 5005"
+          }
+        }
+      ]
+    }
+  ]
+}
